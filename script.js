@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Configuración y Estado del Juego ---
     const cardImages = [
-        '1.gif', '2.webp', '3.webp', '4.jpeg', 
-        '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg'
+        'IMG/1.gif', 'IMG/2.webp', 'IMG/3.webp', 'IMG/4.jpeg', 
+        'IMG/5.jpeg', 'IMG/6.jpeg', 'IMG/7.jpeg', 'IMG/8.jpeg'
     ];
     let cards = [];
     let flippedCards = [];
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.innerHTML = `
                 <div class="card-face card-back">
-                    <img src="img/back.png" alt="Reverso de la carta">
+                    <img src="IMG/back.png" alt="Reverso de la carta">
                 </div>
                 <div class="card-face card-front">
                     <img src="img/${imageName}" alt="Frente de la carta">
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 9. Acciones al ganar el juego
     function winGame() {
         clearInterval(timer);
-        finalImage.src = 'img/ganaste.gif';
+        finalImage.src = 'IMG/ganaste.gif';
         setTimeout(() => modal.classList.add('visible'), 500);
     }
 
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function loseGame() {
         clearInterval(timer);
         lockBoard = true; // Bloquear todo el tablero
-        finalImage.src = 'img/perdiste.gif';
+        finalImage.src = 'IMG/perdiste.gif';
         setTimeout(() => modal.classList.add('visible'), 500);
     }
 
